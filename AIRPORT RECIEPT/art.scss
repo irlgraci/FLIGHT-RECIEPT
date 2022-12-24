@@ -1,0 +1,270 @@
+// VARIABLES
+
+$planegray: white;
+$offgray: rgb(204, 194, 194);
+$planeBlue: rgb(0, 128, 255);
+
+// FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Libre+Franklin&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Libre+Franklin&family=Rubik+Vinyl&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(143, 164, 148);
+}
+
+table{
+    position: absolute;
+    height: 780px;
+    width: 610px;
+    background-color: $planegray;
+    top: 10%;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+table tr:nth-child(1){
+    height: 20%;
+}
+
+table tr:nth-child(2){
+    position: relative;
+    height: 70%;
+    z-index: 0;
+}
+
+.textCon{
+    position: absolute;
+    width: 39%;
+    top: 7%;
+    left: 1.3%;
+    padding: 1.1%;
+    z-index: 5;
+    font-family: Chivo Mono;
+    font-size: 2rem;
+    font-weight: 900;
+    background-color: $planegray;
+}
+
+.bookingNo{
+    position: absolute;
+    background-color: $offgray;
+    padding: 2%;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.452);
+    color: rgb(65, 70, 83);
+    top: 33%;
+    left: 9%;
+    z-index: 4;
+}
+
+span{
+    position: absolute;
+    top: 45%;
+    left: 3%;
+    font-family: Rubik Vinyl;
+    color: red;
+}
+
+img{
+    margin-top: -4%;
+    width: 100%;
+}
+
+.windowBox{
+    position: relative;
+    width: 70%;
+    height: 190%;
+    border: 2px solid $planegray;
+    background-color: $planegray;
+    margin: 9% 0 0 17%;
+    z-index: 4;
+}
+
+#video{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    border: 10px solid $planegray;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.windowFrame, .secondFrame{
+    position: absolute;
+    height: 82%;
+    top: 9%;
+    left: 35%;
+    z-index: 4;
+}
+
+.windowFrame{
+    width: 35%;
+    height: 82%;
+    border: 12px solid rgb(122, 116, 116);
+    box-shadow: 7px 4px 9px 5px rgb(0, 92, 120, .4);
+    border-radius: 25px;
+}
+
+.secondFrame{
+    border: 12px solid $planegray;
+    border-radius: 25px;
+    width: 40%;
+    top: 9%;
+    left: 32%;
+    z-index: 3;
+}
+
+.outerBord{
+    position: absolute;
+    height: 100%;
+    width: 36%;
+    background-color: $planegray;
+}
+
+.OB2{
+    right: 0;
+    width: 31%;
+}
+
+// INFORMATION
+
+.date{
+    margin: 1.5% 0 0 3%;
+}
+
+.returnDate{
+    margin: 3% 0 0 3%;
+}
+
+.infoBox{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 50%;
+    top:43%;
+    left: 5%;
+    border: 4px dashed;
+    border-color: transparent rgb(24, 123, 193) transparent rgb(122, 116, 116);
+}
+
+.leavingInfo, .arrivingInfo, .duration, .planeLogo, .planeLogoB{
+    z-index: 2;
+}
+
+.sched{
+    display: flex;
+    box-sizing: content-box;
+    align-items: center;
+    justify-content: space-around;
+    gap:4%;
+    padding: 5px;
+    margin-top: 2%;
+    margin-left: 1.7%;
+    border: 1.5px solid;
+    box-shadow: 1px 2px 4px;
+    border-radius: 5px;
+    width: 94%;
+    height: auto;
+    background-color: $offgray;
+}
+
+.planeLogo,.planeLogoB{
+    border-radius: 50%;
+    padding: 1%;
+    border: none;
+}
+
+.planeLogo{
+    background-color: rgba(0, 255, 255, 0.272);
+    transform: rotate(65deg);
+    left: 32%;
+}
+
+.planeLogoB{
+    background-color: rgba(255, 166, 0, 0.304);
+    transform: rotate(-110deg);
+}
+
+.leavingInfo, .arrivingInfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Libre Franklin;
+    height: auto;
+    width: 32%;
+    border-radius: 7px;
+    padding: .7%;
+    margin-left: 2%;
+}
+
+.leavingInfo{
+    background-color: rgba(255, 255, 255, 0.745);
+}
+
+.arrivingInfo{
+    background-color: rgba(31, 125, 225, 0.654);
+}
+
+h2, h4, h5, h6{
+    text-align: center;
+    margin: 0;
+}
+
+.duration{
+    background-color: aliceblue;
+    width: 15%;
+    padding: 1%;
+    border-radius: 30px;
+}
+
+.line{
+    position: absolute;
+    width: 87%;
+    height: 1%;
+    background-color: rgba(47, 186, 255, 0.357);
+}
+
+.bookingInfo, .boardingPass{
+    margin-top: 4%;
+    padding: 2%;
+    font-size: 1rem;
+    border-radius: 32px;
+    border-color: gray;
+    z-index: 4;
+}
+
+.boardingPass{
+    margin-left: 14%;
+    background-color: $planeBlue;
+}
+
+.boardingPass:hover{
+    background-color: rgb(54, 151, 249);;
+}
+
+.bookingInfo{
+    margin-right: 13%;
+    background-color: $offgray;
+}
+
+.bookingInfo:hover{
+    background-color: rgb(219, 214, 214);
+}
+
+.foot{
+    display: flex;
+    justify-content: space-between;
+}
